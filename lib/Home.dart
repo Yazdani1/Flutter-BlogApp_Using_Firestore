@@ -9,12 +9,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   String img1 = "https://images.pexels.com/photos/3689772/pexels-photo-3689772.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
   String img2 = "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
   String img3 = "https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   String img4 = "https://images.pexels.com/photos/3771113/pexels-photo-3771113.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-  
+
   Future gettBlocData() async {
     var firestore = Firestore.instance;
     QuerySnapshot snapshot = await firestore.collection("Blog").getDocuments();
@@ -157,7 +156,6 @@ class _HomeState extends State<Home> {
                                         ],
                                       ),
                                     ),
-
                                     Container(
                                       child: Text(Ourdata.data['des'],
                                         maxLines: 4,
@@ -167,12 +165,9 @@ class _HomeState extends State<Home> {
                                         ),
                                       ),
                                     )
-
-
                                   ],
                                 ),
                               )
-
                             ],
                           ),
                         ),
