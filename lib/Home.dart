@@ -21,7 +21,12 @@ class _HomeState extends State<Home> {
     return snapshot.documents;
   }
 
-  
+  Future getRefresh()async{
+    Future.delayed(Duration(seconds: 3));
+    setState(() {
+      gettBlocData();
+    });
+  }
 
 
 
