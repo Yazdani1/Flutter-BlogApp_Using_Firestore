@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
   String img2 = "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
   String img3 = "https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
   String img4 = "https://images.pexels.com/photos/3771113/pexels-photo-3771113.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-
+  
   Future gettBlocData() async {
     var firestore = Firestore.instance;
     QuerySnapshot snapshot = await firestore.collection("Blog").getDocuments();
@@ -27,7 +27,6 @@ class _HomeState extends State<Home> {
       gettBlocData();
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +74,6 @@ class _HomeState extends State<Home> {
   }
 
   //bloc data function
-
   Widget ourBlocData(BuildContext context) {
     return Container(
       height: MediaQuery
